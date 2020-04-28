@@ -1,0 +1,67 @@
+<div class="formContainer">
+    <div id=”overlay” class="overlay"></div>
+    <div class="innerFormWrapper">
+        
+        <div class="custom-modal">
+            <div class="close-icon-wrapper float-right">
+                <span class="close-icon">
+                    <a  (click)="closeCustomModal();" >
+                        <i class="fas fa-window-close"></i>
+                    </a>            
+                </span>
+            </div>
+            <div class="modal-header" *ngIf="empData.id">
+                <h2 class="modal-title">Employee &rsaquo; Update Record</h2>
+            </div>
+            <div class="modal-header" *ngIf="!empData.id">
+                <h2 class="modal-title">Employee &rsaquo; Add Record</h2>
+            </div>
+            <form  role="form" >
+                <div class="fomm-controls">
+                    <div class="form-field">
+                        <label class="label">First Name*</label>
+                        <input type="text" name="firstname" [(ngModel)]="empData.firstname"/>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="label">Last Name*</label>
+                        <input type="text" name="lastname" [(ngModel)]="empData.lastname"/>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="label">Age</label>
+                        <input type="text" name="age" value="{{empData.age}}" [(ngModel)]="empData.age"/>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="label">Salary*</label>
+                        <input type="text" name="salary" value="{{empData.salary}}" [(ngModel)]="empData.salary"/>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="label">Joining Date</label>
+                        <input type="text" name="joiningdate" [(ngModel)]="empData.joiningdate"/>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="label">Status</label>
+                        <select name="status" [(ngModel)]="empData.status">
+                            <option [value]="-1" >Select Status</option>
+                            <option [value]="0">Pending</option>
+                            <option [value]="1">Active</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field action-field" *ngIf="empData.id">
+                        <input type="hidden" name="empId" [(ngModel)]="empData.id" >
+                        <button type="submit" class="btn-submit" (click)="addOrUpdateEmployee();" >Update</button>
+                    </div>
+
+                    <div class="form-field action-field" *ngIf="!empData.id">
+                        <button type="submit" class="btn-submit" (click)="addOrUpdateEmployee();" >Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<ul class="employeeUnique">
+    <li>{{emp.id}}</li>
+    <li>{{emp.firstname}}</li>
+    <li>{{emp.lastname}}</li>
+    <li>{{emp.age}}</li>
+    <li>{{emp.salary}}</li>
+    <li>{{emp.joiningdate}}</li>
+    <li>{{emp.status}}</li>
+    <li>
+        <a class="btn-action" (click)="updateEmpDetails();" ><i class="fas fa-edit"></i></a>
+        <a class="btn-action" (click)="deleteEmpDetails();" ><i class="far fa-trash-alt"></i></a>
+    </li>
+</ul>

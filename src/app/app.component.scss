@@ -1,0 +1,44 @@
+.container{
+    width: 100;
+
+    .topSection{
+        margin: 20px 85px;
+        display: inline-block;
+    }
+    .title{
+        text-align: center;
+        margin: 40px auto;
+        padding-top: 40px;
+    }
+    .empListUl, .employeeUnique{
+        width: 100%;
+        display: inline-block;
+    }
+    .empListUl li{
+        width: 120px;
+        text-align: center;
+        display: inline-block;
+        float: left;
+        padding: 5px 10px;
+    }
+    .btnContainer{
+        text-align: center;
+    }
+    .btn-submit, .btn-anchor{
+        width: 150px;
+        height: 40px;
+    }
+    .btn-anchor{
+        padding: 10px 15px;
+        border:1px solid #333333;
+        border-radius: 10px;
+    }
+    .right-section{
+        float: right;
+    }
+    .btn-submit:hover, .btn-anchor:hover{
+        background-color: #333333;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
