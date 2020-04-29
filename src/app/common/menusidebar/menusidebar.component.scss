@@ -1,0 +1,113 @@
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    height: 100%;
+    min-height: 100px;
+    padding: 0;
+    color: #fff;
+    transition: all 0.3s;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    float: left;
+    position: fixed;
+}
+
+/* The navigation menu links */
+.navbar a {
+    cursor: pointer;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size:16px;
+    color: #ffffff;
+    display: block;
+  }
+  .nav-submenu li{
+      list-style: none;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .navbar a:hover {
+    color: #f1f1f1;
+  }
+     
+#sidebar.hidden {
+    margin-left: -200px;
+}
+     
+a[data-toggle="collapse"] {
+    position: relative;
+}
+     
+@media (max-width: 575px) {
+    #sidebar {
+        margin-left: -200px;
+    }
+    #sidebar.hidden {
+        margin-left: 0;
+    }
+}
+     
+a, a:hover, a:focus {
+    color: inherit;
+}
+     
+// #sidebar .sidebar-header {
+//     padding: 20px;
+// }
+     
+#sidebar ul li a {
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    &:hover {
+      background-color:#050d21f2;
+    }
+}     
+hr {
+    border-top: 1px solid #fff;
+    margin-top: 0;
+}
+.navbar-nav{
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    display: inline-block;
+}
+.navmenu-title{
+    position: absolute;
+    left:60px;
+    text-align: center;
+    margin: 10px;
+    font-size: 16px;
+}
+span.menu-icon {
+    padding: 5px 10px;
+}
+ul.nav-submenu {
+    padding-left: 20px;
+}
+.navbar-toggler{
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title-cms{
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    top:0;
+}
+.collapse{
+    position: fixed;
+    top:40px;
+}
+.dropdown .dropdown-menu{
+    padding: 0;
+    background-color:#323A40;
+    color: #ffffff;
+}

@@ -1,29 +1,36 @@
-<div class="container">
-    <h1 class="title">Employee Details</h1>
-    <div class="topSection">
-        <div class="left-section">
-            <a class="btn-anchor my-20" (click)="addEmpForm();" >Add Employee</a>
+<div class="container-fluid nopadding">
+    <div class="row">
+        <div class="col-md-2">
+            <app-menusidebar></app-menusidebar>
         </div>
-        <div class="right-section"></div>
-    </div>
-    <div class="empList">
-        <ul class="empListUl">
-            <li><strong>Id.</strong></li>
-            <li><strong>First Name</strong></li>
-            <li><strong>Last Name</strong></li>
-            <li><strong>Age</strong></li>
-            <li><strong>Salary</strong></li>
-            <li><strong>Joining Date</strong></li>
-            <li><strong>Status</strong></li>
-            <li><strong>Action</strong></li>
-        </ul>
+        <div class="col-md-10 main-section">
+            <h1 class="title">Employee Details</h1>
+            <div class="topSection">
+                <div class="left-section">
+                    <a class="btn-anchor my-20" (click)="addEmpForm();" >Add Employee</a>
+                </div>
+                <div class="right-section"></div>
+            </div>
+            <div class="empList">
+                <ul class="empListUl">
+                    <li><strong>Id.</strong></li>
+                    <li><strong>First Name</strong></li>
+                    <li><strong>Last Name</strong></li>
+                    <li><strong>Age</strong></li>
+                    <li><strong>Salary</strong></li>
+                    <li><strong>Joining Date</strong></li>
+                    <li><strong>Status</strong></li>
+                    <li><strong>Action</strong></li>
+                </ul>
 
-        <app-employee *ngFor="let emp of employees" [emp]="emp" (populatedEmp)="setEmpData($event);"  (showModal)="toggleModal($event);" (deleteEmp)="deleteEmp($event);"></app-employee>
+                <app-employee *ngFor="let emp of employees" [emp]="emp" (populatedEmp)="setEmpData($event);"  (showModal)="toggleModal($event);" (deleteEmp)="deleteEmp($event);"></app-employee>
 
-        <app-employeeform *ngIf="modalForm" [empData]="existingEmpData" (newEmpData)="getEmpData($event);" (closeModal)="modalForm=false"></app-employeeform>
+                <app-employeeform *ngIf="modalForm" [empData]="existingEmpData" (newEmpData)="getEmpData($event);" (closeModal)="modalForm=false"></app-employeeform>
 
-        <div class="btnContainer">
-            <!-- <button type="submit" class="btn-submit" (click)="addRow()">Add Row</button> -->
-        </div>
-    </div>
+                <div class="btnContainer">
+                    <!-- <button type="submit" class="btn-submit" (click)="addRow()">Add Row</button> -->
+                </div>
+            </div>
+          </div>
+      </div>
   </div>

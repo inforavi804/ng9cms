@@ -1,0 +1,60 @@
+<nav id="sidebar" class="navbar navbar-fixed-top navbar-dark bg-dark">
+        <div class="title-cms">
+            <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h5 class="navmenu-title">Admin Panel</h5>
+        </div>
+        <div class="collapse navbar-collapse show" *ngIf="navbarOpen">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link">
+                        <span class="menu-icon"><i class="fas fa-tachometer-alt"></i></span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="menu-icon"><i class="fas fa-users"></i></span>
+                        Manage Users
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">
+                            <span class="menu-icon">--</span>
+                            User List
+                        </a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item">
+                            <span class="menu-icon">--</span>
+                            User Permissions
+                        </a>
+                    </div>
+                    <!-- <ul class="nav-submenu">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="menu-icon">-</span>
+                                User List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="menu-icon">-</span>
+                                User Permissions
+                            </a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <span class="menu-icon"><i class="fas fa-user-tie"></i></span>
+                        Manage Employees
+                    </a>
+                </li>
+            </ul>
+            <div class="bottom-section links">
+                <ul class="nav navbar-bottom">
+
+                </ul>
+            </div>
+        </div>
+</nav>

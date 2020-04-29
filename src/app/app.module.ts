@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeformComponent } from './employee/employeeform/employeeform.component';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MenusidebarComponent } from './common/menusidebar/menusidebar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    EmployeeformComponent
+    EmployeeformComponent,
+    MenusidebarComponent
   ],
   imports: [
     BrowserModule,
